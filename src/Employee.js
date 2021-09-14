@@ -6,7 +6,7 @@ const {street,country,zone,salary:adressSalary}=address
 
   return (
     <div>
-      <div>this is the name:{name} title= {street} address:{Employesalary}</div>
+      <div>this is the name:{name} title= {street} address:{adressSalary}</div>
     </div>
   )
 }

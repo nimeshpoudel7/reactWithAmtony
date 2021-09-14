@@ -29,6 +29,7 @@ function App() {
       <header className="App-header">
        <Counter/>
        {data.map(details=>{
+         console.log({...details})
          return(<Employee {...details} key={details.id} />)
        })}
       </header>
