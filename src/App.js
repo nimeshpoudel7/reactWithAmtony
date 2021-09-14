@@ -1,18 +1,18 @@
 
 import './App.css';
+import { useState } from 'react';
 function App() {
-  const empData=['nimesh','hvghsvuh','hhfh']
+  const [isLoggedIn, setisLoggedIn] = useState(false)
+   const loginData=()=>{
+     setisLoggedIn(!isLoggedIn)
+     console.log('heu')
+   }
   return (
     <div className="App">
+      
       <header className="App-header">
-      {empData && empData.length>1 &&
-      <div>
-        {empData.map((details)=>{
-          return(<h4>{details}</h4>)
-        })}
-      </div>
-      }
-
+       <div> {isLoggedIn?<h3>Welcome TO </h3>: <h2>please login </h2>}</div>
+       <div>{!isLoggedIn? <button onClick={loginData}>login</button>:<button onClick={loginData}>lOGOUT</button>}</div>
       </header>
 
      
