@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Counter from './Counter';
-// import Employee from './Employee';
+import Employee from './Employee';
 
 
 function App() {
@@ -47,9 +47,10 @@ const emplyoee=[{
       <header className="App-header">
        <Counter/>
        {emplyoee.map((details,index)=>{
+        
         return(
-          <h1>{`employee ${details.name} tiitle ${details.tiitle}`}</h1>
-        )
+           <Employee name={details.name} key={details.id}/>)
+      
        })
        }
        {/* {data.map(details=>{
