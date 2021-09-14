@@ -8,7 +8,7 @@ function App() {
   const data=[
    {
   id:'sas',
-  name1: 'mane Schuster',
+  name: 'mane Schuster',
   title: ' Operations Producer',
   avatar: 'https://cdn.fakercloud.com/avatars/rachelreveley_128.jpg'
  }]
@@ -19,9 +19,8 @@ function App() {
     <div className="App">
       <header className="App-header">
        <Counter/>
-       {data.map((details,index)=>{
-         const{id,name,title}=details
-         return(<Employee idd={id}/>)
+       {data.map(details=>{
+         return(<Employee {...details} key={details.id}/>)
        })}
       </header>
 
