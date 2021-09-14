@@ -1,11 +1,12 @@
 import React from 'react'
 
 const Employee = (props) => {
+const {name,address,title,salary:Employesalary}=props
+const {street,country,zone,salary:adressSalary}=address
 
-const {name,id}=props;
   return (
     <div>
-      <p>this is the name:{name}</p>
+      <div>this is the name:{name} title= {street} address:{Employesalary}</div>
     </div>
   )
 }

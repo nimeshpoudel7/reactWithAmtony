@@ -9,8 +9,17 @@ function App() {
    {
   id:'sas',
   name: 'mane Schuster',
+  salary:1000,
   title: ' Operations Producer',
-  avatar: 'https://cdn.fakercloud.com/avatars/rachelreveley_128.jpg'
+  address:{
+    street:'fhaufh',
+    salary:5000,
+    country:'hfuahfuf',
+    zone:{
+      map:'dadad',
+      ward:'010'
+    }
+  }
  }]
  
   return (
@@ -20,7 +29,7 @@ function App() {
       <header className="App-header">
        <Counter/>
        {data.map(details=>{
-         return(<Employee {...details} key={details.id}/>)
+         return(<Employee {...details} key={details.id} />)
        })}
       </header>
 
