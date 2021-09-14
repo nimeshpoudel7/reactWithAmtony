@@ -5,23 +5,24 @@ import Employee from './Employee';
 
 
 function App() {
-  const [data, setdata] = useState([
+  const data=[
    {
   id:'sas',
   name1: 'mane Schuster',
   title: ' Operations Producer',
   avatar: 'https://cdn.fakercloud.com/avatars/rachelreveley_128.jpg'
- }])
- const hide= data.map((details,index)=>{
-   return( <Employee name={details.name1}/>)
-    })
+ }]
+ 
   return (
 
   
     <div className="App">
       <header className="App-header">
        <Counter/>
-       {hide}
+       {data.map((details,index)=>{
+         const{id,name,title}=details
+         return(<Employee idd={id}/>)
+       })}
       </header>
 
      
