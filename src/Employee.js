@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Employee = (props) => {
-const {name,address,title,salary:Employesalary}=props
-const {street,country,zone,salary:adressSalary}=address
+const {name,address:{street,country,zone,salary:adressSalary},title,salary:Employesalary}=props
+
 
   return (
     <div>
