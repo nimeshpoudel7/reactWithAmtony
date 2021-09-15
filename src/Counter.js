@@ -1,6 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 const Counter = () => {
-  let [count, setcount] = useState(5)
+  let [count, setcount] = useState(0)
+
+  useEffect(() => {
+    console.log('moune')
+    return () => {
+      console.log('unmount')
+    }
+  }, [count])
+  
   const incrementhandler=()=>{
    count= count+1
    setcount(count)
